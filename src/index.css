@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    font-family: 'DM Sans', sans-serif;
+    color-scheme: light !important;
+    color: black !important;
+    zoom: 1
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.dashboard-main-content::-webkit-scrollbar {
+    display: none;
+}
+
+.dashboard-main-content {
+   scrollbar-width: none;
+   -ms-overflow-style: none;   
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::file-selector-button {
+    display: none;
+}
+
+::placeholder {
+    color: #000 !important;
+    opacity: 0.3 !important;
+}
+
+.error {
+    @apply text-[#e76c6c] font-DMSans text-base mt-1;
+}
+
+.react-calendar__tile--active {
+    background: #004D9B !important;
+    border-radius: 5px !important;
+}
+.react-calendar__tile--now { 
+    background: #FFCA40 !important;
+    border-radius: 5px !important;
+}
+.react-calendar {
+    border-radius: 10px !important;
+    border: 1px solid #d1d5db !important;
+}
+
+.range-slider {
+    height: 50px;
+    background-color: transparent;
+}
+
+.range-slider .range-slider__thumb {
+ border-radius: 0px !important;
+ width: 10px !important;
+ height: 50px !important;
+ background-color: #FFCA40 !important;
+}
+
+.range-slider .range-slider__range {
+    background-color: #004D9B !important;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+@layer base {
+    h1 {
+     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xlg:text-6xl font-DMSans;
+    }
+
+    h2 {
+        @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xlg:text-5xl font-DMSans;
+    }
+
+    h3 {
+        @apply text-2xl lg:text-3xl xlg:text-4xl font-DMSans;
+    }
+
+    h4 {
+        @apply text-xl lg:text-2xl xlg:text-3xl font-DMSans;
+    }
+
+    h5 {
+        @apply text-lg sm:text-xl lg:text-2xl font-DMSans;
+    }
+
+    h6 {
+        @apply text-base sm:text-lg lg:text-xl font-DMSans;
+    }
+
+    small {
+        @apply text-sm lg:text-base xlg:text-lg font-DMSans;
+    }
+}

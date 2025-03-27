@@ -1,0 +1,51 @@
+import { Outlet } from 'react-router-dom';
+import { Link } from '../../../component/atoms/Link';
+import { useTranslation } from 'react-i18next';
+
+function RestaurantOrderIndex() {
+  const { t } = useTranslation();
+
+  return (
+    <div className="w-full pt-6 px-4 xlg:px-6">
+      <div className="bg-white w-full flex items-center justify-center h-[60px] border border-black border-opacity-10 rounded-full">
+        <div
+          className="flex items-center justify-between px-4 
+                     xl:w-[650px] gap-x-4"
+        >
+          <Link
+            text={t('viewAll')}
+            iconStyle="!w-[20px] !h-[20px] fill-blue"
+            color="lightBlue"
+            activeState="blue"
+            size="base"
+            navigateTo="all-orders"
+            className="!py-[7px] min-w-[160px]"
+          />
+          <Link
+            text={t('viewTableBooking')}
+            iconStyle="!w-[20px] !h-[20px] fill-blue"
+            color="lightBlue"
+            activeState="blue"
+            size="base"
+            navigateTo="table-booking-orders"
+            className="!py-[7px] min-w-[200px]"
+          />
+          <Link
+            text={t('viewTakeAway')}
+            iconStyle="!w-[20px] !h-[20px] fill-blue"
+            color="lightBlue"
+            activeState="blue"
+            size="base"
+            navigateTo="take-away-orders"
+            className="!py-[7px] min-w-[180px]"
+          />
+        </div>
+      </div>
+      <div className="">
+        <Outlet />
+      </div>
+    </div>
+  );
+}
+
+export default RestaurantOrderIndex;

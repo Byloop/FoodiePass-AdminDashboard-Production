@@ -1,0 +1,52 @@
+export const plans = [
+  { id: 1, name: 'basicPlan', monthlyPrice: '200', annualPrice: '1900' },
+  { id: 2, name: 'premiumPlan', monthlyPrice: '600', annualPrice: '2500' },
+  { id: 3, name: 'advancePlan', monthlyPrice: '900', annualPrice: '4500' },
+];
+
+export const planOffers = [
+  {
+    id: 1,
+    planId: 1,
+    offerPrice: '150',
+    billingType: 'monthly',
+    usageLimit: 50,
+    startDate: '20-01-2025',
+    endDate: '31-01-2025',
+    startTime: '12:00',
+    endTime: '23:00',
+  },
+  {
+    id: 3,
+    planId: 2,
+    offerPrice: '400',
+    billingType: 'monthly',
+    usageLimit: 80,
+    startDate: '02-02-2025',
+    endDate: '20-02-2025',
+    startTime: '06:00',
+    endTime: '12:00',
+  },
+  {
+    id: 4,
+    planId: 2,
+    offerPrice: '1500',
+    billingType: 'yearly',
+    usageLimit: 50,
+    startDate: '20-01-2025',
+    endDate: '31-01-2025',
+    startTime: '16:00',
+    endTime: '23:00',
+  },
+  {
+    id: 6,
+    planId: 3,
+    offerPrice: '3600',
+    billingType: 'yearly',
+    usageLimit: 40,
+    startDate: '01-03-2025',
+    endDate: '20-03-2025',
+    startTime: '06:00',
+    endTime: '15:00',
+  },
+];
